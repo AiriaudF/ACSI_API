@@ -16,7 +16,7 @@ public class GameEntity {
     private int currentTurnNumber = 0;
 
 
-    @OneToMany(mappedBy = "Player")
+    @ManyToMany
     public List<PlayerEntity> getPlayers() {
         return players;
     }
@@ -70,20 +70,6 @@ public class GameEntity {
     public PlayerEntity getNextPlayer(){
         for(PlayerEntity p : getPlayers()){
             try {
-                if(p.getCurrentScoreboard().getCurrentTurn().getNumber().equals(getCurrentTurnNumber()) && p.getCurrentScoreboard().getCurrentTurn().getShotRemaining()>0){
-                    return p;
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        increaseCurrentTurn();
-        return getPlayers().get(0);
-    }
-
-    public PlayerEntity getNextPlayer(){
-        for(PlayerEntity p : getPlayers()){
-            try {
                 if(p.getCurrentScoreboard().getCurrentTurn().getNumber()== getCurrentTurnNumber() && p.getCurrentScoreboard().getCurrentTurn().getShotRemaining()>0){
                     return p;
                 }
@@ -103,11 +89,11 @@ public class GameEntity {
         return res;
     }
 
-    public int getWinner() throws Exception {
+    public int getBestScore() throws Exception {
         int bestScore = 0;
         for (PlayerEntity p : players){
-            if(p.getCurrentScoreboard().getTurns().get(9).getTotalScore()>bestScore){
-                bestScore=p.getCurrentScoreboard().getTurns().get(9).getTotalScore();
+            if(p.getCurrentScoreboard().getTurns().get(9).getCumul()>bestScore){
+                bestScore=p.getCurrentScoreboard().getTurns().get(9).getCumul();
             }
         }
         return bestScore;

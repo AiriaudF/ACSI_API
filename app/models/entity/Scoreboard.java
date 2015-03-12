@@ -135,9 +135,9 @@ public class Scoreboard {
         for(int k = 0;k<getTurns().size();k++){
             Turn t = getTurns().get(k);
             if(t.getNumber()==1){
-                t.setTotalScore(t.getResult());
+                t.setCumul(t.getResult());
             }else {
-                t.setTotalScore(getTurns().get(k - 1).getTotalScore() + t.getResult());
+                t.setCumul(getTurns().get(k - 1).getCumul() + t.getResult());
             }
         }
         return this;

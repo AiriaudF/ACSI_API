@@ -10,6 +10,7 @@ import javax.persistence.*;
 public class ShotEntity {
     private int id;
     private int skittlesFall;
+    private TurnEntity turn;
 
     @Id
     @Column(name = "id")
@@ -49,5 +50,22 @@ public class ShotEntity {
         int result = id;
         result = 31 * result + skittlesFall;
         return result;
+    }
+
+
+    @ManyToOne
+    @JoinColumn(name = "idTurn", referencedColumnName = "id", nullable = false)
+    public TurnEntity getTurn() {
+        return turn;
+    }
+
+    public void setTurn(TurnEntity turn) {
+        this.turn = turn;
+    }
+
+    public static ShotEntity random(TurnEntity turn){
+        int skittlesFall =(int) Math.round(Math.random()*turn.getNbSkittles());
+        //TODO Créateur de shot
+        return new ShotEntity();
     }
 }

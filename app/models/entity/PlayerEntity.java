@@ -1,5 +1,7 @@
 package models.entity;
 
+import play.db.ebean.Model;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -8,7 +10,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "player", schema = "", catalog = "acsi")
-public class PlayerEntity {
+public class PlayerEntity extends Model{
     private int id;
     private String pseudo;
     private String nom;
@@ -26,6 +28,10 @@ public class PlayerEntity {
     private void setId(int id) {
         this.id = id;
     }
+
+    public static Finder<Integer, PlayerEntity> find = new Finder<Integer, PlayerEntity>(
+            Integer.class, PlayerEntity.class
+    );
 
     @Basic
     @Column(name = "pseudo")
@@ -48,7 +54,7 @@ public class PlayerEntity {
     }
 
     @Basic
-    @Column(name = "prénom")
+    @Column(name = "prenom")
     public String getPrénom() {
         return prénom;
     }
@@ -93,7 +99,7 @@ public class PlayerEntity {
         return result;
     }
 
-    @OneToMany(mappedBy = "Player")
+    @OneToMany(mappedBy = "player")
     public List<ScoreboardEntity> getScoreboards() {
         return scoreboards;
     }

@@ -81,8 +81,8 @@ public class Game {
     public int getWinner() throws Exception {
         int bestScore = 0;
         for (Player p : players){
-            if(p.getCurrentScoreboard().getTurns().get(9).getTotalScore()>bestScore){
-                bestScore=p.getCurrentScoreboard().getTurns().get(9).getTotalScore();
+            if(p.getCurrentScoreboard().getTurns().get(9).getCumul()>bestScore){
+                bestScore=p.getCurrentScoreboard().getTurns().get(9).getCumul();
             }
         }
         return bestScore;

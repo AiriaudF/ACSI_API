@@ -2,6 +2,7 @@ package controllers;
 
 import models.entity.PlayerEntity;
 import play.mvc.Result;
+import views.html.index;
 
 import static play.mvc.Results.ok;
 
@@ -10,8 +11,9 @@ import static play.mvc.Results.ok;
  */
 public class PlayerRoute {
 
-    public Result index(){
-        PlayerEntity p = new PlayerEntity();
-        return ok();
+
+    public static Result index(){
+        PlayerEntity p = PlayerEntity.find.byId(1);
+        return ok(index.render(p.toString()));
     }
 }

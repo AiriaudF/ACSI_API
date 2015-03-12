@@ -17,7 +17,7 @@ public class Turn {
     private int shotRemaining;
     private int result = 0;
     private State state=State.CLASSIC;
-    private int totalScore = 0;
+    private int cumul = 0;
 
     public Turn(int id, int number, Scoreboard scoreboard) {
         this.id = id;
@@ -71,12 +71,12 @@ public class Turn {
         return this;
     }
 
-    public int getTotalScore() {
-        return totalScore;
+    public int getCumul() {
+        return cumul;
     }
 
-    public void setTotalScore(int totalScore) {
-        this.totalScore = totalScore;
+    public void setCumul(int cumul) {
+        this.cumul = cumul;
     }
 
     public Shot launchBall() throws Exception {
