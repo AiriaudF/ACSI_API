@@ -14,7 +14,7 @@ public class PlayerEntity extends Model{
     private int id;
     private String pseudo;
     private String nom;
-    private String prénom;
+    private String prenom;
     private byte vip;
     private List<ScoreboardEntity> scoreboards;
     private GameEntity currentGame;
@@ -55,12 +55,12 @@ public class PlayerEntity extends Model{
 
     @Basic
     @Column(name = "prenom")
-    public String getPrénom() {
-        return prénom;
+    public String getPrenom() {
+        return prenom;
     }
 
-    public void setPrénom(String prénom) {
-        this.prénom = prénom;
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
     }
 
     @Basic
@@ -83,7 +83,7 @@ public class PlayerEntity extends Model{
         if (id != that.id) return false;
         if (vip != that.vip) return false;
         if (nom != null ? !nom.equals(that.nom) : that.nom != null) return false;
-        if (prénom != null ? !prénom.equals(that.prénom) : that.prénom != null) return false;
+        if (prenom != null ? !prenom.equals(that.prenom) : that.prenom != null) return false;
         if (pseudo != null ? !pseudo.equals(that.pseudo) : that.pseudo != null) return false;
 
         return true;
@@ -94,7 +94,7 @@ public class PlayerEntity extends Model{
         int result = id;
         result = 31 * result + (pseudo != null ? pseudo.hashCode() : 0);
         result = 31 * result + (nom != null ? nom.hashCode() : 0);
-        result = 31 * result + (prénom != null ? prénom.hashCode() : 0);
+        result = 31 * result + (prenom != null ? prenom.hashCode() : 0);
         result = 31 * result + (int) vip;
         return result;
     }
@@ -119,7 +119,7 @@ public class PlayerEntity extends Model{
     /**
      * Méthode pour la logique
      */
-    public PlayerEntity newScore(Game game){
+    public PlayerEntity newScore(GameEntity game){
         //TODO création d'une nouvelle scoreboard
         //scoreboards.add(new Scoreboard(this,game,1));
         return this;

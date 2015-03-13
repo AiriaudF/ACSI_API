@@ -1,5 +1,7 @@
 package models.entity;
 
+import play.db.ebean.Model;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.List;
@@ -10,11 +12,16 @@ import java.util.List;
 @Entity
 @Table(name = "game", schema = "", catalog = "acsi")
 public class GameEntity {
+    @GeneratedValue
     private int id;
     private Timestamp date;
     private List<PlayerEntity> players;
     private int currentTurnNumber = 0;
 
+
+    public static Model.Finder<Integer, GameEntity> find = new Model.Finder<Integer, GameEntity>(
+            Integer.class, GameEntity.class
+    );
 
     @ManyToMany
     public List<PlayerEntity> getPlayers() {
