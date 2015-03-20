@@ -1,10 +1,8 @@
 package controllers;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import models.entity.GameEntity;
+import models.entity.PlayerEntity;
 import play.libs.Json;
 import play.mvc.Result;
-import views.html.index;
 
 import static play.mvc.Results.ok;
 
@@ -14,8 +12,7 @@ import static play.mvc.Results.ok;
 public class PlayerRoute {
 
     public static Result index(){
-        GameEntity p = GameEntity.find.byId(1);
-        JsonNode pJson = Json.toJson(p);
-        return ok(index.render(Json.stringify(pJson)));
+        PlayerEntity p = PlayerEntity.find.byId(1);
+        return ok(Json.toJson(p));
     }
 }

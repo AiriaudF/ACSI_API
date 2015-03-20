@@ -15,8 +15,10 @@ public class TurnEntity {
     private int cumul;
     private ScoreboardEntity scoreboard;
     private List<ShotEntity> shots;
+    @Enumerated(value = EnumType.STRING)
     private State state = State.CLASSIC;
     private int nbSkittles;
+    @Transient
     private int shotRemaining;
 
 
@@ -84,7 +86,7 @@ public class TurnEntity {
         return result1;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "idScoreboard", referencedColumnName = "id", nullable = false)
     public ScoreboardEntity getScoreboard() {
         return scoreboard;

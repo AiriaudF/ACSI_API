@@ -14,8 +14,10 @@ import java.util.List;
 public class GameEntity {
     @GeneratedValue
     private int id;
+    @GeneratedValue
     private Timestamp date;
     private List<PlayerEntity> players;
+    @Transient
     private int currentTurnNumber = 0;
 
 
@@ -23,7 +25,7 @@ public class GameEntity {
             Integer.class, GameEntity.class
     );
 
-    @ManyToMany
+    @OneToMany(mappedBy = "game",targetEntity = ScoreboardEntity.class)
     public List<PlayerEntity> getPlayers() {
         return players;
     }
@@ -74,6 +76,7 @@ public class GameEntity {
         return result;
     }
 
+    @Transient
     public PlayerEntity getNextPlayer(){
         for(PlayerEntity p : getPlayers()){
             try {
@@ -88,6 +91,7 @@ public class GameEntity {
         return getPlayers().get(0);
     }
 
+    @Transient
     public boolean hasNextPlayer(){
         boolean res = true;
         if(getCurrentTurnNumber()>10){
@@ -96,6 +100,7 @@ public class GameEntity {
         return res;
     }
 
+    @Transient
     public int getBestScore() throws Exception {
         int bestScore = 0;
         for (PlayerEntity p : players){

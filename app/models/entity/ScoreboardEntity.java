@@ -8,24 +8,22 @@ import java.util.List;
  * Created by Thomas on 12/03/2015.
  */
 @Entity
-@Table(name = "scoreboard", schema = "", catalog = "acsi")
+@Table(name = "scoreboard", schema = "", catalog = "acsi",uniqueConstraints= @UniqueConstraint(columnNames = {"idPlayer","idGame"}))
 public class ScoreboardEntity {
-    private int id;
-    private PlayerEntity player;
-    private GameEntity game;
-    private TurnEntity currentTurn;
-    private List<TurnEntity> turns = new ArrayList<>();
-    private int turnRemaining = 10;
 
     @Id
-    @Column(name = "id")
-    public int getId() {
-        return id;
-    }
+    @GeneratedValue
+    private int id;
+    @Column(name = "idPlayer", nullable = false, table = "player")
+    private PlayerEntity player;
+    @Column(name = "idGame", nullable = false, table = "game")
+    private GameEntity game;
+    @Transient
+    private TurnEntity currentTurn;
+    private List<TurnEntity> turns = new ArrayList<>();
+    @Transient
+    private int turnRemaining = 10;
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -39,12 +37,15 @@ public class ScoreboardEntity {
         return true;
     }
 
-    @Override
-    public int hashCode() {
+    public int getId() {
         return id;
     }
 
-    @ManyToOne
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = ScoreboardEntity.class)
     @JoinColumn(name = "idPlayer", referencedColumnName = "id", nullable = false)
     public PlayerEntity getPlayer() {
         return player;
@@ -54,7 +55,7 @@ public class ScoreboardEntity {
         this.player = player;
     }
 
-    @OneToOne
+    @ManyToOne(fetch = FetchType.LAZY,targetEntity = ScoreboardEntity.class)
     @JoinColumn(name = "idGame", referencedColumnName = "id", nullable = false)
     public GameEntity getGame() {
         return game;
@@ -65,6 +66,7 @@ public class ScoreboardEntity {
     }
 
 
+    @Transient
     public TurnEntity nextTurn() throws Exception {
         if(getTurnRemaining()>0){
             //TODO Corriger création tour
@@ -77,10 +79,12 @@ public class ScoreboardEntity {
         throw new Exception("Fin du jeu");
     }
 
+    @Transient
     public int getTurnRemaining() {
         return turnRemaining;
     }
 
+    @Transient
     public ScoreboardEntity decreaseTurnRemaining() {
         this.turnRemaining --;
         return this;
@@ -91,6 +95,7 @@ public class ScoreboardEntity {
         return turns;
     }
 
+    @Transient
     public TurnEntity getCurrentTurn() {
         return currentTurn;
     }
@@ -99,6 +104,7 @@ public class ScoreboardEntity {
         this.currentTurn = currentTurn;
     }
 
+    @Transient
     private ScoreboardEntity calculScore(){
         /**
          * je lis les tours dans le sens inverse afin de ne pas avoir à vérifier l'état

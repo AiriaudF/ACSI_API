@@ -17,6 +17,7 @@ public class PlayerEntity extends Model{
     private String prenom;
     private byte vip;
     private List<ScoreboardEntity> scoreboards;
+    @Transient
     private GameEntity currentGame;
 
     @Id
@@ -108,6 +109,7 @@ public class PlayerEntity extends Model{
         this.scoreboards = scoreboards;
     }
 
+    @Transient
     public GameEntity getCurrentGame() {
         return currentGame;
     }
@@ -125,6 +127,7 @@ public class PlayerEntity extends Model{
         return this;
     }
 
+    @Transient
     public PlayerEntity shot(){
         try {
             this.getCurrentScoreboard().getCurrentTurn().launchBall();
@@ -134,6 +137,7 @@ public class PlayerEntity extends Model{
         return this;
     }
 
+    @Transient
     public ScoreboardEntity getCurrentScoreboard() throws Exception {
         for (ScoreboardEntity s : scoreboards){
             if(s.getPlayer()==this && s.getGame()==this.getCurrentGame()){

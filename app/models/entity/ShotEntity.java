@@ -63,6 +63,7 @@ public class ShotEntity {
         this.turn = turn;
     }
 
+    @Transient
     public static ShotEntity random(TurnEntity turn){
         int skittlesFall =(int) Math.round(Math.random()*turn.getNbSkittles());
         //TODO Créateur de shot
