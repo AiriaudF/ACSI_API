@@ -127,7 +127,7 @@ public class PlayerEntity extends Model{
         return this;
     }
 
-    @Transient
+
     public PlayerEntity shot(){
         try {
             this.getCurrentScoreboard().getCurrentTurn().launchBall();
@@ -138,13 +138,13 @@ public class PlayerEntity extends Model{
     }
 
     @Transient
-    public ScoreboardEntity getCurrentScoreboard() throws Exception {
+    public ScoreboardEntity getCurrentScoreboard(){
         for (ScoreboardEntity s : scoreboards){
             if(s.getPlayer()==this && s.getGame()==this.getCurrentGame()){
                 return s;
             }
         }
-        throw new Exception("Aucun scoreboard trouvé pour le joueur "+this.getPseudo()+" et pour la game "+this.getCurrentGame().toString());
+        return null;
     }
 
 }

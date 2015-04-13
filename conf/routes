@@ -1,10 +1,11 @@
 # Routes
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
-
+#User route
+GET        /player/:id            controllers.PlayerController.findById(id:Integer)
 
 # Home page
-GET        /                    controllers.PlayerRoute.index()
+GET        /                    controllers.Home.index()
 
 # Map static resources from the /public folder to the /assets URL path
 GET        /assets/*file        controllers.Assets.at(path="/public", file)
