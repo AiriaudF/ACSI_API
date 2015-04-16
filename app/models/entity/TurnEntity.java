@@ -1,5 +1,8 @@
 package models.entity;
 
+import models.State;
+import play.db.ebean.Model;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -8,7 +11,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "turn", schema = "", catalog = "acsi")
-public class TurnEntity {
+public class TurnEntity extends Model {
     private int id;
     private int number;
     private int result;

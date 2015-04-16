@@ -1,5 +1,6 @@
 package models.entity;
 
+import play.data.validation.Constraints.*;
 import play.db.ebean.Model;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ import java.util.List;
 @Table(name = "player", schema = "", catalog = "acsi")
 public class PlayerEntity extends Model{
     private int id;
+    @Required
     private String pseudo;
     private String nom;
     private String prenom;

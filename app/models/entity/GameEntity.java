@@ -11,7 +11,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "game", schema = "", catalog = "acsi")
-public class GameEntity {
+public class GameEntity extends Model {
     @GeneratedValue
     private int id;
     @GeneratedValue

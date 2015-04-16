@@ -1,5 +1,8 @@
 package models.entity;
 
+import models.State;
+import play.db.ebean.Model;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +12,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "scoreboard", schema = "", catalog = "acsi",uniqueConstraints= @UniqueConstraint(columnNames = {"idPlayer","idGame"}))
-public class ScoreboardEntity {
+public class ScoreboardEntity extends Model {
 
     @Id
     @GeneratedValue
