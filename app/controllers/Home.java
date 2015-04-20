@@ -1,7 +1,7 @@
 package controllers;
 
 import controllers.routes;
-import models.Url;
+
 import play.mvc.Controller;
 import play.mvc.Result;
 

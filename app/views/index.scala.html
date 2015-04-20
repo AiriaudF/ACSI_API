@@ -34,11 +34,7 @@
     <div id="message-bar" class="swagger-ui-wrap">&nbsp;</div>
     <div id="swagger-ui-container" class="swagger-ui-wrap">
       <div class="container">
-          @for(annotation <- list) {
-            <div>
-              @annotation.getAnnotation[Url](classOf[Url]).method()
-            </div>
-          }
+
       </div>
     </div>
   </body>
