@@ -4,6 +4,9 @@ import controllers.routes;
 
 import play.mvc.Controller;
 import play.mvc.Result;
+import views.html.book;
+import views.html.creategame;
+import views.html.home;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -30,4 +33,18 @@ public class Home extends Controller {
         }
         return ok(views.html.index.render(list));
     }
+
+    public static Result book() {
+        return ok(book.render());
+    }
+
+    public static Result home() {
+        return ok(home.render());
+    }
+    public static Result creategame() {
+        return ok(creategame.render());
+    }
+
+
+
 }

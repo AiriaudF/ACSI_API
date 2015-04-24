@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <title>BowlSoft</title>
+        <link rel="stylesheet" href="style.css" />
+        <meta charset="UTF-8">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/style.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/book.css")">
+        <script type="text/javascript" src="@routes.Assets.at("/javascripts/jquery.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("/javascripts/create.js")"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <fieldset>
+                                    <a href="#" id="addplayer"><span class="glyphicon glyphicon-plus"></span>Add Player</a>
+                                </fieldset>
+                            </div>
+                            <form action="" method="POST">
+                                <div id="form-wrapper">
+                                    <div class="col-md-6 playerinput">
+                                        <input type="text" class="form-control" name="player[]" placeholder="Name">
+                                    </div>
+                                    <div class="col-md-6 playerinput">
+                                        <input type="text" class="form-control" name="player[]" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <fieldset>
+                                    <a href="#" id="removebutton"><span class="glyphicon glyphicon-remove"></span>Remove Player</a>
+                                    </fieldset>
+                                </div>
+                                <input type="submit" class="myButton" value="Valider et lancer la partie"><br />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <select name="listepiste" id="listepiste">
+                        <option value="1">Piste 1</option >
+                        <option value="2">Piste 2</option >
+                        <option value="3">Piste 3</option >
+                        <option value="4">Piste 4</option >
+                        <option value="5">Piste 5</option >
+
+                    </select>
+
+                </div>
+            </div>
+            <div class="row">
+                <a href="@routes.Application.home()"><input type="button" class="myButton bottom-center" value="Home"></a>
+            </div>
+        </div>
+    </body>
+</html>

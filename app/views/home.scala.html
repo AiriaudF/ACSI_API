@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <title>BowlSoft</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/style.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/tableindex.css")">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <div class="carre">
+	</div>
+            <!--<h1 class="top-right">Bonjour</h1>-->
+        <table class="top-right">
+            <CAPTION>Pistes</CAPTION>
+            <tr>
+                <td>&nbsp;Numéro&nbsp;</td>
+                <td>&nbsp;Active&nbsp;</td>
+            </tr>
+            <tr>
+                <td>Piste 1&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;<input id="Piste1" class="css-checkbox" type="checkbox" /><label for="Piste1" name="Piste1" class="css-label">&nbsp;</label></td>
+            </tr>
+            <tr>
+                <td>Piste 2&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;<input id="Piste2" class="css-checkbox" type="checkbox" /><label for="Piste2" name="Piste2" class="css-label">&nbsp;</label></td>
+            </tr>
+            <tr>
+                <td>Piste 3&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;<input id="Piste3" class="css-checkbox" type="checkbox" /><label for="Piste3" name="Piste3" class="css-label">&nbsp;</label></td>
+            </tr>
+            <tr>
+                <td>Piste 4&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;<input id="Piste4" class="css-checkbox" type="checkbox" /><label for="Piste4" name="Piste4" class="css-label">&nbsp;</label></td>
+            </tr>
+            <tr>
+                <td>Piste 5&nbsp;&nbsp;</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;<input id="Piste5" class="css-checkbox" type="checkbox" /><label for="Piste5" name="Piste5" class="css-label">&nbsp;</label></td>
+            </tr>
+
+
+        </table>
+
+        <a href="@routes.Application.creategame()"><input type="button" class="top-left myButton" value="Créer une partie"></a>
+        <a href="@routes.Application.book()"><input type="button" class="top-center myButton" value="Planning" ></a>
+        <a href="@routes.Application.index()"><input type="button" class="bottom-right myButton" value="Gestion des parties" ></a>
+    </body>
+</html>

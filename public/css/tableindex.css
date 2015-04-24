@@ -1,0 +1,14 @@
+table{
+    font-family:"airstrikecond";
+    background-color: #ffffff;
+    font-size:45px;
+    border: solid 2px;
+    border-collapse: collapse;
+}
+tr{
+    border:1px solid black;
+}
+td{
+    border:1px solid black;
+}
+
