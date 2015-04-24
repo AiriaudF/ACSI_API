@@ -24,6 +24,10 @@ public class ShotEntity extends Model {
         this.id = id;
     }
 
+    public static Finder<Integer, ShotEntity> find = new Finder<Integer, ShotEntity>(
+            Integer.class, ShotEntity.class
+    );
+
     @Basic
     @Column(name = "skittlesFall")
     public int getSkittlesFall() {

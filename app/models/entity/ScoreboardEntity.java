@@ -27,6 +27,10 @@ public class ScoreboardEntity extends Model {
     @Transient
     private int turnRemaining = 10;
 
+    public static Finder<Integer, ScoreboardEntity> find = new Finder<Integer, ScoreboardEntity>(
+            Integer.class, ScoreboardEntity.class
+    );
+
 
     @Override
     public boolean equals(Object o) {
@@ -72,9 +76,11 @@ public class ScoreboardEntity extends Model {
     @Transient
     public TurnEntity nextTurn() throws Exception {
         if(getTurnRemaining()>0){
-            //TODO Corriger création tour
-            //Turn nextTurn = new Turn(1,getTurns().size()+1,this);
             TurnEntity nextTurn = new TurnEntity();
+            nextTurn.setScoreboard(this);
+            nextTurn.setNumber(getTurns().size()+1);
+            nextTurn.save();
+            //TurnEntity nextTurn = new TurnEntity();
             this.calculScore().decreaseTurnRemaining().setCurrentTurn(nextTurn);
             return nextTurn;
         }

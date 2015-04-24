@@ -2,14 +2,42 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 #User route
-GET        /player/$id<[0-9]+>            controllers.PlayerController.findById(id:Integer)
-GET        /player                        controllers.PlayerController.findAll()
-PUT        /player                        controllers.PlayerController.updatePlayer()
+GET           /player/$id<[0-9]+>            controllers.PlayerController.findById(id:Integer)
+GET           /player                        controllers.PlayerController.findAll()
+PUT           /player                        controllers.PlayerController.updatePlayer()
 DELETE        /player                        controllers.PlayerController.deletePlayer()
-POST       /player                        controllers.PlayerController.createPlayer()
+POST          /player                        controllers.PlayerController.createPlayer()
+
+#Game route
+GET           /game/:id              controllers.GameController.findById(id:Integer)
+GET           /game                          controllers.GameController.findAll()
+POST           /game                          controllers.GameController.createGame()
+DELETE        /game                          controllers.GameController.deleteGame()
+PUT          /game                          controllers.GameController.updateGame()
+
+#Scoreboard route
+GET           /scoreboard/$id<[0-9]+>        controllers.ScoreboardController.findById(id:Integer)
+GET           /scoreboard                    controllers.ScoreboardController.findAll()
+POST           /scoreboard                    controllers.ScoreboardController.createScoreboard()
+DELETE        /scoreboard                    controllers.ScoreboardController.deleteScoreboard()
+PUT          /scoreboard                    controllers.ScoreboardController.updateScoreboard()
+
+#Turn route
+GET           /turn/$id<[0-9]+>              controllers.TurnController.findById(id:Integer)
+GET           /turn                          controllers.TurnController.findAll()
+POST           /turn                          controllers.TurnController.createTurn()
+DELETE        /turn                          controllers.TurnController.deleteTurn()
+PUT          /turn                          controllers.TurnController.updateTurn()
+
+#Shot
+GET           /shot/$id<[0-9]+>              controllers.ShotController.findById(id:Integer)
+GET           /shot                          controllers.ShotController.findAll()
+POST           /shot                          controllers.ShotController.createShot()
+DELETE        /shot                          controllers.ShotController.deleteShot()
+PUT          /shot                          controllers.ShotController.updateShot()
 
 # Home page
-GET        /                             controllers.Home.index()
+GET           /                              controllers.Home.index()
 
 # Map static resources from the /public folder to the /assets URL path
-GET        /assets/*file                 controllers.Assets.at(path="/public", file)
+GET           /assets/*file                  controllers.Assets.at(path="/public", file)

@@ -35,6 +35,10 @@ public class TurnEntity extends Model {
         this.id = id;
     }
 
+    public static Finder<Integer, TurnEntity> find = new Finder<Integer, TurnEntity>(
+            Integer.class, TurnEntity.class
+    );
+
     @Basic
     @Column(name = "number")
     public int getNumber() {

@@ -80,7 +80,8 @@ public class GameEntity extends Model {
     public PlayerEntity getNextPlayer(){
         for(PlayerEntity p : getPlayers()){
             try {
-                if(p.getCurrentScoreboard().getCurrentTurn().getNumber()== getCurrentTurnNumber() && p.getCurrentScoreboard().getCurrentTurn().getShotRemaining()>0){
+                if(p.getCurrentScoreboard().getCurrentTurn().getNumber()== getCurrentTurnNumber()
+                        && p.getCurrentScoreboard().getCurrentTurn().getShotRemaining()>0){
                     return p;
                 }
             } catch (Exception e) {
