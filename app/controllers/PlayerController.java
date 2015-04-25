@@ -1,8 +1,5 @@
 package controllers;
 
-import models.HttpMethod;
-import models.Parameter;
-import models.Url;
 import models.entity.PlayerEntity;
 import play.libs.Json;
 import play.mvc.Controller;
@@ -16,13 +13,10 @@ import play.mvc.Result;
  */
 public class PlayerController extends Controller {
 
-//    @Url(value="/player",method= HttpMethod.GET,
-//            parameters={@Parameter(type="int",name="id")}    )
     public static Result findById(int id){
         return ok(Json.toJson(PlayerEntity.find.byId(id)));
     }
 
-//    @Url(value="/player",method = HttpMethod.GET)
     public static Result findAll(){
         return ok(Json.toJson(PlayerEntity.find.all()));
     }
