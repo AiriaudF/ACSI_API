@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <title>BowlSoft</title>
+        <meta charset="UTF-8">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/style.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/book.css")">
+        <script type="text/javascript" src="@routes.Assets.at("/javascripts/jquery.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("/javascripts/book.js")"></script>
+    </head>
+    <body>
+        <table class="">
+            <tr>
+                <td colspan=10>
+            Aujourd'hui
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <th>8:00 - 10:00</th>
+                <th>10:00 - 12:00</th>
+                <th>12:00 - 14:00</th>
+                <th>14:00 - 16:00</th>
+                <th>16:00 - 18:00</th>
+                <th>18:00 - 20:00</th>
+                <th>20:00 - 22:00</th>
+                <th>22:00 - 00:00</th>
+                <th>00:00 - 02:00</th>
+            </tr>
+            <tr>
+                <td>Lundi</td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="lundi-h1-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="lundi-h1-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="lundi-h1-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="lundi-h1-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="lundi-h1-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="lundi-h2-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="lundi-h2-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="lundi-h2-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="lundi-h2-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="lundi-h2-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="lundi-h3-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="lundi-h3-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="lundi-h3-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="lundi-h3-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="lundi-h3-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="lundi-h4-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="lundi-h4-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="lundi-h4-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="lundi-h4-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="lundi-h4-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="lundi-h5-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="lundi-h5-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="lundi-h5-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="lundi-h5-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="lundi-h5-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="lundi-h6-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="lundi-h6-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="lundi-h6-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="lundi-h6-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="lundi-h6-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="lundi-h7-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="lundi-h7-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="lundi-h7-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="lundi-h7-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="lundi-h7-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="lundi-h8-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="lundi-h8-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="lundi-h8-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="lundi-h8-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="lundi-h8-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="lundi-h9-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="lundi-h9-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="lundi-h9-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="lundi-h9-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="lundi-h9-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Mardi</td><td>
+                <table class="tableint">
+                    <tr><td id="mardi-h1-p1" class="greensquare">Piste 1</td></tr>
+                    <tr><td id="mardi-h1-p2" class="greensquare">Piste 2</td></tr>
+                    <tr><td id="mardi-h1-p3" class="greensquare">Piste 3</td></tr>
+                    <tr><td id="mardi-h1-p4" class="greensquare">Piste 4</td></tr>
+                    <tr><td id="mardi-h1-p5" class="greensquare">Piste 5</td></tr>
+                </table>
+            </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="mardi-h2-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="mardi-h2-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="mardi-h2-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="mardi-h2-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="mardi-h2-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="mardi-h3-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="mardi-h3-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="mardi-h3-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="mardi-h3-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="mardi-h3-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="mardi-h4-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="mardi-h4-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="mardi-h4-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="mardi-h4-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="mardi-h4-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="mardi-h5-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="mardi-h5-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="mardi-h5-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="mardi-h5-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="mardi-h5-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="mardi-h6-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="mardi-h6-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="mardi-h6-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="mardi-h6-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="mardi-h6-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="mardi-h7-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="mardi-h7-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="mardi-h7-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="mardi-h7-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="mardi-h7-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="mardi-h8-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="mardi-h8-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="mardi-h8-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="mardi-h8-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="mardi-h8-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="mardi-h9-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="mardi-h9-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="mardi-h9-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="mardi-h9-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="mardi-h9-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Mercredi</td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="mercredi-h1-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="mercredi-h1-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="mercredi-h1-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="mercredi-h1-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="mercredi-h1-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="mercredi-h2-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="mercredi-h2-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="mercredi-h2-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="mercredi-h2-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="mercredi-h2-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="mercredi-h3-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="mercredi-h3-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="mercredi-h3-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="mercredi-h3-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="mercredi-h3-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="mercredi-h4-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="mercredi-h4-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="mercredi-h4-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="mercredi-h4-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="mercredi-h4-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="mercredi-h5-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="mercredi-h5-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="mercredi-h5-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="mercredi-h5-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="mercredi-h5-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="mercredi-h6-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="mercredi-h6-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="mercredi-h6-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="mercredi-h6-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="mercredi-h6-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="mercredi-h7-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="mercredi-h7-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="mercredi-h7-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="mercredi-h7-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="mercredi-h7-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="mercredi-h8-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="mercredi-h8-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="mercredi-h8-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="mercredi-h8-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="mercredi-h8-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="mercredi-h9-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="mercredi-h9-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="mercredi-h9-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="mercredi-h9-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="mercredi-h9-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Jeudi</td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="jeudi-h1-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="jeudi-h1-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="jeudi-h1-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="jeudi-h1-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="jeudi-h1-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="jeudi-h2-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="jeudi-h2-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="jeudi-h2-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="jeudi-h2-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="jeudi-h2-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="jeudi-h3-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="jeudi-h3-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="jeudi-h3-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="jeudi-h3-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="jeudi-h3-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="jeudi-h4-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="jeudi-h4-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="jeudi-h4-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="jeudi-h4-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="jeudi-h4-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="jeudi-h5-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="jeudi-h5-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="jeudi-h5-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="jeudi-h5-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="jeudi-h5-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="jeudi-h6-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="jeudi-h6-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="jeudi-h6-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="jeudi-h6-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="jeudi-h6-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="jeudi-h7-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="jeudi-h7-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="jeudi-h7-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="jeudi-h7-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="jeudi-h7-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="jeudi-h8-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="jeudi-h8-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="jeudi-h8-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="jeudi-h8-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="jeudi-h8-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="jeudi-h9-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="jeudi-h9-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="jeudi-h9-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="jeudi-h9-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="jeudi-h9-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Vendredi</td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="vendredi-h1-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="vendredi-h1-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="vendredi-h1-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="vendredi-h1-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="vendredi-h1-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="vendredi-h2-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="vendredi-h2-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="vendredi-h2-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="vendredi-h2-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="vendredi-h2-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="vendredi-h3-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="vendredi-h3-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="vendredi-h3-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="vendredi-h3-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="vendredi-h3-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="vendredi-h4-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="vendredi-h4-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="vendredi-h4-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="vendredi-h4-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="vendredi-h4-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="vendredi-h5-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="vendredi-h5-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="vendredi-h5-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="vendredi-h5-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="vendredi-h5-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="vendredi-h6-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="vendredi-h6-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="vendredi-h6-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="vendredi-h6-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="vendredi-h6-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="vendredi-h7-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="vendredi-h7-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="vendredi-h7-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="vendredi-h7-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="vendredi-h7-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="vendredi-h8-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="vendredi-h8-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="vendredi-h8-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="vendredi-h8-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="vendredi-h8-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="vendredi-h9-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="vendredi-h9-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="vendredi-h9-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="vendredi-h9-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="vendredi-h9-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Samedi</td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="samedi-h1-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="samedi-h1-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="samedi-h1-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="samedi-h1-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="samedi-h1-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="samedi-h2-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="samedi-h2-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="samedi-h2-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="samedi-h2-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="samedi-h2-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="samedi-h3-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="samedi-h3-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="samedi-h3-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="samedi-h3-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="samedi-h3-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="samedi-h4-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="samedi-h4-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="samedi-h4-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="samedi-h4-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="samedi-h4-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="samedi-h5-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="samedi-h5-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="samedi-h5-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="samedi-h5-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="samedi-h5-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="samedi-h6-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="samedi-h6-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="samedi-h6-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="samedi-h6-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="samedi-h6-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="samedi-h7-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="samedi-h7-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="samedi-h7-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="samedi-h7-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="samedi-h7-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="samedi-h8-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="samedi-h8-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="samedi-h8-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="samedi-h8-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="samedi-h8-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="samedi-h9-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="samedi-h9-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="samedi-h9-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="samedi-h9-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="samedi-h9-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Dimanche</td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="dimanche-h1-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="dimanche-h1-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="dimanche-h1-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="dimanche-h1-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="dimanche-h1-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="dimanche-h2-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="dimanche-h2-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="dimanche-h2-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="dimanche-h2-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="dimanche-h2-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="dimanche-h3-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="dimanche-h3-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="dimanche-h3-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="dimanche-h3-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="dimanche-h3-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="dimanche-h4-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="dimanche-h4-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="dimanche-h4-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="dimanche-h4-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="dimanche-h4-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="dimanche-h5-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="dimanche-h5-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="dimanche-h5-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="dimanche-h5-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="dimanche-h5-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="dimanche-h6-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="dimanche-h6-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="dimanche-h6-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="dimanche-h6-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="dimanche-h6-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="dimanche-h7-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="dimanche-h7-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="dimanche-h7-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="dimanche-h7-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="dimanche-h7-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="dimanche-h8-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="dimanche-h8-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="dimanche-h8-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="dimanche-h8-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="dimanche-h8-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <table class="tableint">
+                        <tr><td id="dimanche-h9-p1" class="greensquare">Piste 1</td></tr>
+                        <tr><td id="dimanche-h9-p2" class="greensquare">Piste 2</td></tr>
+                        <tr><td id="dimanche-h9-p3" class="greensquare">Piste 3</td></tr>
+                        <tr><td id="dimanche-h9-p4" class="greensquare">Piste 4</td></tr>
+                        <tr><td id="dimanche-h9-p5" class="greensquare">Piste 5</td></tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <table class="table2foot bottom-center"><tr><td class="td2foot1">Disponible</td><td  class="legendeverte"></td><td class="td2foot1">&nbsp;R&eacute;server&nbsp;&nbsp;</td><td class="legenderouge"></td></tr></table>
+
+
+
+
+
+        <div id="divbg"  class="bottom-bg-popup">
+
+        </div>
+
+
+        <div id="divcontent" style="display:none;"class="bottom-popup-content">
+            <center>
+                <select name="Jour" id="jour">
+                    <option disabled selected>Selectionnez un jour</option>
+                    <option value="lundi">Lundi</option>
+                    <option value="mardi">Mardi</option>
+                    <option value="mercredi">Mercredi</option>
+                    <option value="jeudi">Jeudi</option>
+                    <option value="vendredi">Vendredi</option>
+                    <option value="samedi">Samedi</option>
+                    <option value="dimanche">Dimanche</option>
+                </select>
+                <br />
+                <select name="horaire" id="horaire">
+                    <option disabled selected>Selectionnez une plage horaire</option>
+                    <option value="h1">8:00 - 10:00</option >
+                    <option value="h2">10:00 - 12:00</option >
+                    <option value="h3">12:00 - 14:00</option >
+                    <option value="h4">14:00 - 16:00</option >
+                    <option value="h5">16:00 - 18:00</option >
+                    <option value="h6">18:00 - 20:00</option >
+                    <option value="h7">20:00 - 22:00</option >
+                    <option value="h8">22:00 - 00:00</option >
+                    <option value="h9">00:00 - 02:00</option >
+                </select>
+                <br />
+                <select name="piste" id="piste">
+                    <option disabled selected>Selectionnez une piste</option>
+                    <option value="p1">Piste 1</option>
+                    <option value="p2">Piste 2</option>
+                    <option value="p3">Piste 3</option>
+                    <option value="p4">Piste 4</option>
+                    <option value="p5">Piste 5</option>
+                </select>
+                <br />
+                <input type="submit" id="resa" value="Réserver">
+            </center>
+        </div>
+
+
+        <input type="button" id="ajoutresa" class="bottom-right myButton" value="Ajouter une réservation">
+
+        <a href="@routes.Application.home()"><input type="button" class="bottom-left myButton" value="Home"></a>
+
+
+    </body>
+</html>
