@@ -14,4 +14,5 @@ public class GameController extends Controller {
     public static Result findById(int id){
         return ok(Json.toJson(GameEntity.find.byId(id)));
     }
+
 }
