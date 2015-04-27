@@ -14,7 +14,6 @@ public class GameController extends Controller {
         return ok(Json.toJson(GameEntity.find.byId(id)));
     }
 
-<<<<<<< HEAD
     public static Result findAll(){
         return ok(Json.toJson(GameEntity.find.all()));
     }
@@ -33,6 +32,4 @@ public class GameController extends Controller {
         GameEntity.find.byId(request().body().asJson().get("id").asInt()).delete();
         return ok();
     }
-=======
->>>>>>> 1d15101c0619e4f62e95722a19a31a3d26e5c138
 }
