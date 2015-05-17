@@ -18,7 +18,10 @@ public class PlayerEntity extends Model{
     private String nom;
     private String prenom;
     private byte vip;
-    private List<ScoreboardEntity> scoreboards;
+
+
+    @OneToMany(fetch=FetchType.LAZY ,mappedBy = "player")
+    public List<ScoreboardEntity> scoreboards;
     @Transient
     private GameEntity currentGame;
 
@@ -102,14 +105,14 @@ public class PlayerEntity extends Model{
         return result;
     }
 
-    @OneToMany(mappedBy = "player")
-    public List<ScoreboardEntity> getScoreboards() {
-        return scoreboards;
-    }
-
-    public void setScoreboards(List<ScoreboardEntity> scoreboards) {
-        this.scoreboards = scoreboards;
-    }
+//
+//    public List<ScoreboardEntity> getScoreboards() {
+//        return scoreboards;
+//    }
+//
+//    public void setScoreboards(List<ScoreboardEntity> scoreboards) {
+//        this.scoreboards = scoreboards;
+//    }
 
     @Transient
     public GameEntity getCurrentGame() {
@@ -142,7 +145,7 @@ public class PlayerEntity extends Model{
     @Transient
     public ScoreboardEntity getCurrentScoreboard(){
         for (ScoreboardEntity s : scoreboards){
-            if(s.getPlayer()==this && s.getGame()==this.getCurrentGame()){
+            if(s.player==this && s.game==this.getCurrentGame()){
                 return s;
             }
         }

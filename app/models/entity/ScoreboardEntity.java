@@ -1,5 +1,6 @@
 package models.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import models.State;
 import play.db.ebean.Model;
 
@@ -17,10 +18,19 @@ public class ScoreboardEntity extends Model {
     @Id
     @GeneratedValue
     private int id;
-    @Column(name = "idPlayer", nullable = false, table = "player")
-    private PlayerEntity player;
-    @Column(name = "idGame", nullable = false, table = "game")
-    private GameEntity game;
+
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = PlayerEntity.class)
+    @JoinColumn(name = "idPlayer", referencedColumnName = "id", table = "player",nullable = false)
+    @Column(name = "idPlayer", nullable = false, table = "scoreboard")
+    public PlayerEntity player;
+
+    @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY,targetEntity = GameEntity.class)
+    @JoinColumn(name = "idGame", referencedColumnName = "id",table = "game", nullable = false)
+    @Column(name = "idGame", nullable = false, table = "scoreboard")
+    public GameEntity game;
+
     @Transient
     private TurnEntity currentTurn;
     private List<TurnEntity> turns = new ArrayList<>();
@@ -52,25 +62,25 @@ public class ScoreboardEntity extends Model {
         this.id = id;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY, targetEntity = ScoreboardEntity.class)
-    @JoinColumn(name = "idPlayer", referencedColumnName = "id", nullable = false)
-    public PlayerEntity getPlayer() {
-        return player;
-    }
 
-    public void setPlayer(PlayerEntity player) {
-        this.player = player;
-    }
 
-    @ManyToOne(fetch = FetchType.LAZY,targetEntity = ScoreboardEntity.class)
-    @JoinColumn(name = "idGame", referencedColumnName = "id", nullable = false)
-    public GameEntity getGame() {
-        return game;
-    }
-
-    public void setGame(GameEntity game) {
-        this.game = game;
-    }
+//    public PlayerEntity getPlayer() {
+//        return player;
+//    }
+//
+//    public void setPlayer(PlayerEntity player) {
+//        this.player = player;
+//    }
+//
+//
+//
+//    public GameEntity getGame() {
+//        return game;
+//    }
+//
+//    public void setGame(GameEntity game) {
+//        this.game = game;
+//    }
 
 
     @Transient

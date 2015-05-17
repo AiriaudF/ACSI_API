@@ -4,9 +4,9 @@
 #User route
 GET           /player/$id<[0-9]+>            controllers.PlayerController.findById(id:Integer)
 GET           /player                        controllers.PlayerController.findAll()
-PUT           /player                        controllers.PlayerController.updatePlayer()
-DELETE        /player                        controllers.PlayerController.deletePlayer()
 POST          /player                        controllers.PlayerController.createPlayer()
+DELETE        /player                        controllers.PlayerController.deletePlayer()
+PUT           /player                        controllers.PlayerController.updatePlayer()
 
 #Game route
 GET           /game/:id              controllers.GameController.findById(id:Integer)

@@ -4,6 +4,7 @@ import play.db.ebean.Model;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,8 +26,12 @@ public class GameEntity extends Model {
             Integer.class, GameEntity.class
     );
 
-    @OneToMany(mappedBy = "game",targetEntity = ScoreboardEntity.class)
     public List<PlayerEntity> getPlayers() {
+        players = new ArrayList<>();
+        List<ScoreboardEntity> scoreboards = ScoreboardEntity.find.where().eq("idGame",this.id).findList();
+        for(ScoreboardEntity s : scoreboards){
+            players.add(s.player);
+        }
         return players;
     }
 
@@ -89,7 +94,7 @@ public class GameEntity extends Model {
             }
         }
         increaseCurrentTurn();
-        return getPlayers().get(0);
+        return players.get(0);
     }
 
     @Transient
@@ -101,14 +106,14 @@ public class GameEntity extends Model {
         return res;
     }
 
-    @Transient
-    public int getBestScore() throws Exception {
-        int bestScore = 0;
-        for (PlayerEntity p : players){
-            if(p.getCurrentScoreboard().getTurns().get(9).getCumul()>bestScore){
-                bestScore=p.getCurrentScoreboard().getTurns().get(9).getCumul();
-            }
-        }
-        return bestScore;
-    }
+//
+//    public int getBestScore() throws Exception {
+//        int bestScore = 0;
+//        for (PlayerEntity p : getPlayers()){
+//            if(p.getCurrentScoreboard().getTurns().get(9).getCumul()>bestScore){
+//                bestScore=p.getCurrentScoreboard().getTurns().get(9).getCumul();
+//            }
+//        }
+//        return bestScore;
+//    }
 }
